@@ -1,193 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Taskify - Smart Task Management</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ✅ AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #4b6cb7, #182848);
       color: #fff;
-      line-height: 1.6;
       scroll-behavior: smooth;
     }
-
-    header {
-      padding: 60px 20px;
-      text-align: center;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+    .logo {
+      font-size: 1.8rem;
+      color: #00c9a7;
+      font-weight: bold;
     }
-
-    header p {
-      font-size: 1.2rem;
-      color: #ddd;
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
     }
-
+    nav a:hover {
+      color: #00c9a7;
+    }
+    .search-box {
+      padding: 6px 15px;
+      border-radius: 20px;
+      border: none;
+      background-color: rgba(255,255,255,0.1);
+      color: #fff;
+      outline: none;
+    }
+    .btn, .lang-btn {
+      background-color: #00c9a7;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .btn:hover, .lang-btn:hover {
+      background-color: #00bfa0;
+    }
     section {
       padding: 60px 20px;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: auto;
     }
-
     h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
       color: #00c9a7;
+      margin-bottom: 20px;
       text-align: center;
     }
-
     .features, .tools {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       text-align: center;
     }
-
     .feature-box, .tool-box {
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
+      border-radius: 10px;
     }
-
-    .feature-box:hover, .tool-box:hover {
-      transform: scale(1.05);
-    }
-
     .tool-box img {
       width: 60px;
       height: 60px;
       margin-bottom: 10px;
     }
-
-    .btn {
-      background-color: #00c9a7;
-      color: #fff;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      display: block;
-      margin: 30px auto 0;
-    }
-
-    .btn:hover {
-      background-color: #00bfa0;
-      transform: scale(1.05);
-    }
-
     footer {
-      padding: 30px 20px;
-      background-color: rgba(0, 0, 0, 0.2);
       text-align: center;
+      padding: 30px;
       color: #ccc;
-      font-size: 0.9rem;
     }
-
-    a { color: #00c9a7; text-decoration: none; }
-
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- 🔝 Navbar -->
+  <div class="navbar">
+    <div class="logo" id="logo">📌 Taskify</div>
+    <nav>
+      <a href="#about" id="link-about">About</a>
+      <a href="#features" id="link-features">Features</a>
+      <a href="#tech" id="link-tech">Technologies</a>
+      <a href="#contact" id="link-contact">Contact</a>
+    </nav>
+    <input type="text" class="search-box" placeholder="🔍" />
+    <button class="lang-btn" onclick="toggleLang()">🌐 اللغة</button>
+  </div>
 
+  <!-- 🔻 Header -->
   <header data-aos="fade-down">
-    <h1>🚀 Taskify</h1>
-    <p>Your complete task management backend platform built with modern tools.</p>
+    <h1 id="main-title">🚀 Taskify</h1>
+    <p id="main-subtitle">Your complete task management backend platform built with modern tools.</p>
   </header>
 
-  <section data-aos="fade-up">
-    <h2>About Taskify</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      <strong>Taskify</strong> is an open-source project designed to manage tasks efficiently through a powerful RESTful API. Built with <strong>Node.js</strong> and <strong>Express.js</strong>, and deployed using <strong>Docker</strong> on <strong>OpenShift</strong>, Taskify provides developers with a complete backend solution for task management applications.
+  <!-- 📖 About -->
+  <section id="about" data-aos="fade-up">
+    <h2 id="about-title">About Taskify</h2>
+    <p id="about-desc" style="text-align:center; max-width:800px; margin:auto;">
+      Taskify is an open-source backend system that simplifies task management via a secure REST API. It's built with Node.js, Docker, and deployed on OpenShift.
     </p>
-    <button class="btn" onclick="window.location.href='https://github.com/Uliwazeer/taskify'">🔗 View Project on GitHub</button>
+    <button class="btn" onclick="window.open('https://github.com/Uliwazeer/taskify')">🔗 GitHub</button>
   </section>
 
-  <section data-aos="fade-right">
-    <h2>Key Features</h2>
+  <!-- 🛠 Features -->
+  <section id="features" data-aos="fade-right">
+    <h2 id="features-title">Features</h2>
     <div class="features">
-      <div class="feature-box" data-aos="zoom-in">
-        <h3>🧠 Smart Management</h3>
-        <p>Organize and track tasks with a clean and secure API structure.</p>
-      </div>
-      <div class="feature-box" data-aos="zoom-in">
-        <h3>⚙️ REST API</h3>
-        <p>Easy to integrate into mobile or frontend apps using Swagger.</p>
-      </div>
-      <div class="feature-box" data-aos="zoom-in">
-        <h3>🚀 OpenShift Deployment</h3>
-        <p>Deployed using CI/CD on OpenShift via GitHub Actions.</p>
-      </div>
-      <div class="feature-box" data-aos="zoom-in">
-        <h3>🔐 Authentication</h3>
-        <p>JWT-secured endpoints with user login and registration.</p>
-      </div>
+      <div class="feature-box"><h3>🧠 Smart Tasks</h3><p id="f1">Manage, update, and delete tasks easily.</p></div>
+      <div class="feature-box"><h3>🔐 Authentication</h3><p id="f2">Secure login with JWT tokens.</p></div>
+      <div class="feature-box"><h3>🚀 Deployable</h3><p id="f3">Dockerized and ready for OpenShift.</p></div>
+      <div class="feature-box"><h3>📦 API Ready</h3><p id="f4">Connect from any frontend app.</p></div>
     </div>
-    <button class="btn" onclick="window.location.href='https://localhost:7096/swagger/index.html'">🌐 Explore Taskify API</button>
   </section>
 
-  <section data-aos="fade-left">
-    <h2>Technologies Used</h2>
+  <!-- ⚙ Tech -->
+  <section id="tech" data-aos="fade-left">
+    <h2 id="tech-title">Technologies</h2>
     <div class="tools">
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
-        <p>Node.js</p>
-      </div>
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
-        <p>Express.js</p>
-      </div>
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
-        <p>MongoDB</p>
-      </div>
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-        <p>Docker</p>
-      </div>
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg" alt="OpenShift" style="height:40px;">
-        <p>OpenShift</p>
-      </div>
-      <div class="tool-box" data-aos="flip-left">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions">
-        <p>GitHub Actions</p>
-      </div>
+      <div class="tool-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"><p>Node.js</p></div>
+      <div class="tool-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"><p>Express.js</p></div>
+      <div class="tool-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+      <div class="tool-box"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg" style="height:40px;"><p>OpenShift</p></div>
+      <div class="tool-box"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><p>GitHub Actions</p></div>
     </div>
   </section>
 
-  <section data-aos="fade-up">
-    <h2>Contact</h2>
-    <p style="text-align: center;">
+  <!-- 📬 Contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2 id="contact-title">Contact</h2>
+    <p>
       📧 Email: <a href="mailto:ali.wazeer2000@gmail.com">ali.wazeer2000@gmail.com</a><br>
-      🔗 GitHub: <a href="https://github.com/Uliwazeer/taskify" target="_blank">https://github.com/Uliwazeer/taskify</a>
+      🔗 GitHub: <a href="https://github.com/Uliwazeer/taskify">github.com/Uliwazeer/taskify</a>
     </p>
   </section>
 
+  <!-- 🔻 Footer -->
   <footer data-aos="fade-up">
-    © 2025 Taskify. Built with ❤️ by Ali Wazeer.
+    <p id="footer-text">© 2025 Taskify. Built with ❤️ by Ali Wazeer.</p>
   </footer>
 
-  <!-- ✅ AOS Script -->
+  <!-- AOS + Toggle Lang Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    AOS.init({ duration: 1000, once: true });
+
+    const translations = {
+      ar: {
+        "logo": "📌 تاسكفاي",
+        "main-title": "🚀 تاسكفاي",
+        "main-subtitle": "أفضل نظام لإدارة المهام باستخدام أدوات حديثة.",
+        "link-about": "حول",
+        "link-features": "المميزات",
+        "link-tech": "التقنيات",
+        "link-contact": "تواصل",
+        "about-title": "عن تاسكفاي",
+        "about-desc": "تاسكفاي هو نظام مفتوح المصدر لإدارة المهام باستخدام REST API آمن وسهل النشر باستخدام Docker وOpenShift.",
+        "features-title": "المميزات",
+        "f1": "أضف وحدث واحذف المهام بسهولة.",
+        "f2": "تسجيل دخول آمن باستخدام JWT.",
+        "f3": "محزم بـ Docker ويعمل على OpenShift.",
+        "f4": "متوافق مع أي تطبيق واجهة أمامية.",
+        "tech-title": "التقنيات المستخدمة",
+        "contact-title": "تواصل معنا",
+        "footer-text": "© ٢٠٢٥ تاسكفاي. صُنع بحب بواسطة علي وزير."
+      },
+      en: {
+        "logo": "📌 Taskify",
+        "main-title": "🚀 Taskify",
+        "main-subtitle": "Your complete task management backend platform built with modern tools.",
+        "link-about": "About",
+        "link-features": "Features",
+        "link-tech": "Technologies",
+        "link-contact": "Contact",
+        "about-title": "About Taskify",
+        "about-desc": "Taskify is an open-source backend system that simplifies task management via a secure REST API. It's built with Node.js, Docker, and deployed on OpenShift.",
+        "features-title": "Features",
+        "f1": "Manage, update, and delete tasks easily.",
+        "f2": "Secure login with JWT tokens.",
+        "f3": "Dockerized and ready for OpenShift.",
+        "f4": "Connect from any frontend app.",
+        "tech-title": "Technologies",
+        "contact-title": "Contact",
+        "footer-text": "© 2025 Taskify. Built with ❤️ by Ali Wazeer."
+      }
+    };
+
+    let currentLang = 'en';
+
+    function toggleLang() {
+      currentLang = currentLang === 'en' ? 'ar' : 'en';
+      for (const id in translations[currentLang]) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = translations[currentLang][id];
+      }
+    }
   </script>
 </body>
 </html>
