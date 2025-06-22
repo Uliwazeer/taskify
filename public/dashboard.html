@@ -1,8 +1,146 @@
 <!DOCTYPE html>
-<html>
-<head><title>Taskify Dashboard</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Taskify - Smart Task Management</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00c9a7;
+      text-align: center;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: scale(1.05);
+    }
+
+    .btn {
+      background-color: #00c9a7;
+      color: #fff;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: block;
+      margin: 30px auto 0;
+    }
+
+    .btn:hover {
+      background-color: #00bfa0;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
 <body>
-  <h1>Taskify Dashboard</h1>
-  <p>Login and manage your tasks via the API.</p>
+
+  <header>
+    <h1>🚀 Taskify</h1>
+    <p>Revolutionize your task management experience with automation and smart APIs.</p>
+  </header>
+
+  <section>
+    <h2>Why Taskify?</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>🧠 Smart Management</h3>
+        <p>Organize, assign, and track tasks efficiently with AI-enhanced tools.</p>
+      </div>
+      <div class="feature-box">
+        <h3>⚡ Fast API Integration</h3>
+        <p>Integrate your frontend or mobile app easily using our RESTful APIs.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🔐 Secure & Reliable</h3>
+        <p>Built with enterprise-grade security and deployed on OpenShift.</p>
+      </div>
+    </div>
+    <button class="btn" onclick="window.location.href='https://localhost:7096/swagger/index.html'">Explore Taskify API</button>
+  </section>
+
+  <section>
+    <h2>How It Works</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      Taskify is built using Node.js and Express, with a modular structure (models, routes, middleware). Data is stored securely, and actions like task creation, updates, and user login are handled through RESTful endpoints.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">
+      📧 Email: <a href="mailto:ali.noureldeen.wazeer@gmail.com" style="color:#00c9a7;">ali.noureldeen.wazeer@gmail.com</a><br>
+      🔗 GitHub: <a href="https://github.com/Uliwazeer/EFG-Hermes-Internship-Backend-.NET-" style="color:#00c9a7;" target="_blank">View Project</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Taskify. All rights reserved.
+  </footer>
+
 </body>
 </html>
