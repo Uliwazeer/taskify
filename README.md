@@ -162,7 +162,7 @@ oc logs deployment/taskify-app
 🔗 [LinkedIn](https://www.linkedin.com/in/aliwazeer)
 💻 [GitHub](https://github.com/Uliwazeer)
 
-```
+
 ### SCREENSHOOT
 # 0.1 Taskify In English
 ![Screenshot (112)]
