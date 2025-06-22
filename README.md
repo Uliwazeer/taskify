@@ -166,18 +166,29 @@ oc logs deployment/taskify-app
 ### SCREENSHOOT
 # 0.1 Taskify In English
 ![Screenshot (112)]
-(https://github.com/user-attachments/assets/8b4cecfe-5621-44a4-8eee-d4eb47c9f7c5)
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(112).jpg
 
 # 0.2 
 ![Screenshot (111)]
-(https://github.com/user-attachments/assets/85e34b04-932c-472c-9dbd-b06cdecc100b)
-
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(111).png
 
 # 0.3
 ![Screenshot (110)]
-(https://github.com/user-attachments/assets/96665788-53a6-46ac-97b2-2195990941eb)
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(110).jpg
 
+# 0.4
+![Screenshot (109)]
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(109).png
 
+# When Site In Arabic Language
+# 0.5
+![Screenshot (115)]
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(115).png
 
+# 0.6
+![Screenshot (114)]
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(114).png
 
-
+# 0.7
+![Screenshot (113)]
+https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(113).png
