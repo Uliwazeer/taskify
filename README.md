@@ -2,7 +2,6 @@
 # 📋 Taskify - Smart Task Management API
 
 Taskify is a backend API I built using Node.js, Express.js, and MongoDB to manage tasks with full CRUD functionality. It includes user authentication using JWT, 
-![Uploading Screenshot (111).png…]()
 password hashing with Bcrypt, and a clean, scalable project structure. The API is containerized with Docker and fully deployable on OpenShift using different strategies.
 
 ---
@@ -160,21 +159,24 @@ oc logs deployment/taskify-app
 ## Live Demo On Youtube Channel >> https://youtu.be/eY_A24v8N9c?si=wZa-33hOiUx_D7-q 
 ## 🙋‍♂️ Contact Me
 
-📧 [ali.noureldeen.wazeer@gmail.com](mailto:ali.noureldeen.wazeer@gmail.com)
 🔗 [LinkedIn](https://www.linkedin.com/in/aliwazeer)
 💻 [GitHub](https://github.com/Uliwazeer)
 
 ```
 ### SCREENSHOOT
 # 0.1 Taskify In English
-![Screenshot (112)](https://github.com/user-attachments/assets/8b4cecfe-5621-44a4-8eee-d4eb47c9f7c5)
+![Screenshot (112)]
+(https://github.com/user-attachments/assets/8b4cecfe-5621-44a4-8eee-d4eb47c9f7c5)
 
 # 0.2 
-![Screenshot (111)](https://github.com/user-attachments/assets/85e34b04-932c-472c-9dbd-b06cdecc100b)
+![Screenshot (111)]
+(https://github.com/user-attachments/assets/85e34b04-932c-472c-9dbd-b06cdecc100b)
 
 
 # 0.3
-![Screenshot (110)](https://github.com/user-attachments/assets/96665788-53a6-46ac-97b2-2195990941eb)
+![Screenshot (110)]
+(https://github.com/user-attachments/assets/96665788-53a6-46ac-97b2-2195990941eb)
+
 
 
 
