@@ -165,7 +165,6 @@ oc logs deployment/taskify-app
 
 ### SCREENSHOOT
 # 0.1 Taskify In English
-![Screenshot (112)]
 https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(112).jpg
 
 # 0.2 
