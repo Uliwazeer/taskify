@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <title>Taskify - Smart Task Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #4b6cb7, #182848);
       color: #fff;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
     }
 
     header h1 {
@@ -47,22 +47,28 @@
       text-align: center;
     }
 
-    .features {
+    .features, .tools {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       text-align: center;
     }
 
-    .feature-box {
+    .feature-box, .tool-box {
       background: rgba(255, 255, 255, 0.05);
       padding: 20px;
       border-radius: 12px;
       transition: transform 0.3s ease;
     }
 
-    .feature-box:hover {
+    .feature-box:hover, .tool-box:hover {
       transform: scale(1.05);
+    }
+
+    .tool-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
 
     .btn {
@@ -91,56 +97,97 @@
       font-size: 0.9rem;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    a { color: #00c9a7; text-decoration: none; }
+
   </style>
 </head>
 <body>
 
-  <header>
+  <header data-aos="fade-down">
     <h1>🚀 Taskify</h1>
-    <p>Revolutionize your task management experience with automation and smart APIs.</p>
+    <p>Your complete task management backend platform built with modern tools.</p>
   </header>
 
-  <section>
-    <h2>Why Taskify?</h2>
+  <section data-aos="fade-up">
+    <h2>About Taskify</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      <strong>Taskify</strong> is an open-source project designed to manage tasks efficiently through a powerful RESTful API. Built with <strong>Node.js</strong> and <strong>Express.js</strong>, and deployed using <strong>Docker</strong> on <strong>OpenShift</strong>, Taskify provides developers with a complete backend solution for task management applications.
+    </p>
+    <button class="btn" onclick="window.location.href='https://github.com/Uliwazeer/taskify'">🔗 View Project on GitHub</button>
+  </section>
+
+  <section data-aos="fade-right">
+    <h2>Key Features</h2>
     <div class="features">
-      <div class="feature-box">
+      <div class="feature-box" data-aos="zoom-in">
         <h3>🧠 Smart Management</h3>
-        <p>Organize, assign, and track tasks efficiently with AI-enhanced tools.</p>
+        <p>Organize and track tasks with a clean and secure API structure.</p>
       </div>
-      <div class="feature-box">
-        <h3>⚡ Fast API Integration</h3>
-        <p>Integrate your frontend or mobile app easily using our RESTful APIs.</p>
+      <div class="feature-box" data-aos="zoom-in">
+        <h3>⚙️ REST API</h3>
+        <p>Easy to integrate into mobile or frontend apps using Swagger.</p>
       </div>
-      <div class="feature-box">
-        <h3>🔐 Secure & Reliable</h3>
-        <p>Built with enterprise-grade security and deployed on OpenShift.</p>
+      <div class="feature-box" data-aos="zoom-in">
+        <h3>🚀 OpenShift Deployment</h3>
+        <p>Deployed using CI/CD on OpenShift via GitHub Actions.</p>
+      </div>
+      <div class="feature-box" data-aos="zoom-in">
+        <h3>🔐 Authentication</h3>
+        <p>JWT-secured endpoints with user login and registration.</p>
       </div>
     </div>
-    <button class="btn" onclick="window.location.href='https://localhost:7096/swagger/index.html'">Explore Taskify API</button>
+    <button class="btn" onclick="window.location.href='https://localhost:7096/swagger/index.html'">🌐 Explore Taskify API</button>
   </section>
 
-  <section>
-    <h2>How It Works</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">
-      Taskify is built using Node.js and Express, with a modular structure (models, routes, middleware). Data is stored securely, and actions like task creation, updates, and user login are handled through RESTful endpoints.
-    </p>
+  <section data-aos="fade-left">
+    <h2>Technologies Used</h2>
+    <div class="tools">
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
+        <p>Express.js</p>
+      </div>
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
+        <p>MongoDB</p>
+      </div>
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+        <p>Docker</p>
+      </div>
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/OpenShift-LogoType.svg" alt="OpenShift" style="height:40px;">
+        <p>OpenShift</p>
+      </div>
+      <div class="tool-box" data-aos="flip-left">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions">
+        <p>GitHub Actions</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact Us</h2>
+  <section data-aos="fade-up">
+    <h2>Contact</h2>
     <p style="text-align: center;">
-      📧 Email: <a href="mailto:ali.noureldeen.wazeer@gmail.com" style="color:#00c9a7;">ali.noureldeen.wazeer@gmail.com</a><br>
-      🔗 GitHub: <a href="https://github.com/Uliwazeer/EFG-Hermes-Internship-Backend-.NET-" style="color:#00c9a7;" target="_blank">View Project</a>
+      📧 Email: <a href="mailto:ali.wazeer2000@gmail.com">ali.wazeer2000@gmail.com</a><br>
+      🔗 GitHub: <a href="https://github.com/Uliwazeer/taskify" target="_blank">https://github.com/Uliwazeer/taskify</a>
     </p>
   </section>
 
-  <footer>
-    © 2025 Taskify. All rights reserved.
+  <footer data-aos="fade-up">
+    © 2025 Taskify. Built with ❤️ by Ali Wazeer.
   </footer>
 
+  <!-- ✅ AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
