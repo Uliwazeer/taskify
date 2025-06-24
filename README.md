@@ -165,6 +165,7 @@ oc logs deployment/taskify-app
 
 ### SCREENSHOOT
 # 0.1 Taskify In English
+![Screenshot (109)](https://github.com/user-attachments/assets/0613ad11-8b66-40e3-980d-e89a9ebe7f70)
 
 ![Screenshot (111)](https://github.com/user-attachments/assets/72b10153-814b-471d-913c-f8c8669cce16)
 
