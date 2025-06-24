@@ -165,29 +165,17 @@ oc logs deployment/taskify-app
 
 ### SCREENSHOOT
 # 0.1 Taskify In English
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(112).jpg
 
-# 0.2 
-![Screenshot (111)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(111).png
+![Screenshot (111)](https://github.com/user-attachments/assets/72b10153-814b-471d-913c-f8c8669cce16)
 
-# 0.3
-![Screenshot (110)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(110).jpg
 
-# 0.4
-![Screenshot (109)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(109).png
+![Screenshot (110)](https://github.com/user-attachments/assets/1fc28060-12fe-4054-bdc0-0222cf28d55d)
+
+
+![Screenshot (112)](https://github.com/user-attachments/assets/1d6d976c-057c-46c1-8e24-fed161ae5fe1)
 
 # When Site In Arabic Language
 # 0.5
-![Screenshot (115)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(115).png
+![Screenshot (113)](https://github.com/user-attachments/assets/b31a748b-75c6-4c32-b004-0337b822e8e4)
 
-# 0.6
-![Screenshot (114)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(114).png
 
-# 0.7
-![Screenshot (113)]
-https://github.com/Uliwazeer/taskify/blob/main/Images/Screenshot%20(113).png
